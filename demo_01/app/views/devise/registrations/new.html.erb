@@ -2,8 +2,11 @@
   <h2 class="form-signin-heading">Sign up</h2>
   <%= devise_error_messages! %>
 
+  <%= f.label :nickname, class: "sr-only" %><br />
+  <%= f.text_field :nickname, class: "form-control", autofocus: true %>
+
   <%= f.label "Email address", class: "sr-only" %><br />
-  <%= f.email_field :email, class: "form-control", placeholder: "Email address", required: true, autofocus: true %>
+  <%= f.email_field :email, class: "form-control", placeholder: "Email address", required: true %>
   
   <%= f.label :Password, class: "sr-only" %>
   <% if @minimum_password_length %>
