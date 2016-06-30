@@ -1,0 +1,6 @@
+.form-inline.clearfix
+	.nested-fields
+		= f.label :step
+		%br
+		= f.text_field :step, class: "form-input form-control"
+		= link_to_remove_association "Remove Step", f, class: "btn btn-default form-button"
