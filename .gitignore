@@ -15,3 +15,4 @@
 /log/*.log
 /tmp
 /Gemfile.lock
+demo_03-recipe/public/system
