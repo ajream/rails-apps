@@ -3,7 +3,8 @@ require 'doorkeeper/grape/helpers'
 module Users
   class UserApi < Grape::API
     helpers Doorkeeper::Grape::Helpers
-
+    helpers APIHelpers
+    
     before do
       doorkeeper_authorize!
     end
@@ -20,7 +21,8 @@ module Users
       end
 
       get ":id", root: "user" do
-        User.where(id: params[:id]).first!
+        # User.where(id: params[:id]).first!
+        current_user.as_json()
       end
     end
   end
